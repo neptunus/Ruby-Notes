@@ -1,0 +1,33 @@
+body {
+  font-size: 16pt;
+  font-family: -apple-system;
+}
+input {
+  width: 100%; 
+  font-size: 20px;
+}
+pre {
+  width: 40%;
+  float: left;
+}
+ruby {
+}
+rt {
+  font-size: 1em;
+  opacity: 0;
+}
+ruby > span {
+  display: inline-block;
+  transform: translateY(0);
+  box-shadow: 0 1px 0 0 black;
+  outline: 1px dashed white;
+}
+ruby:hover rt {
+  opacity: 1;
+  outline: 1px solid;
+}
+ruby:hover > span {
+  background-color: white;
+  outline: none;
+  box-shadow: 0 1px 0 0 black, -1px 0 0 0 black, 1px 0 0 0 black;
+}
