@@ -31,9 +31,20 @@ const State = {
 
 const stringify = (json) => JSON.stringify(json, null, ' ');
 
-const App = {
-  oninit: () => State.value = '「私・わたし」のシャツは「赤・あか」です: Skyrtan {mín|meen} er rauð',
+const Instructions = {
   view: () => [
+    m('p', 'Leiðbeiningar'), 
+    m('p', 
+      'Umlyktu orði sem þú vilt útskýra með slaufusvigum { } eða japanskum gæsalöppum 「 」. Settu | eða ・ á milli orðs og útskýringar.',
+    ),
+    m('p', 'Dæmi:', m('br'), '{私|watashi}', m('br'), '「私・わたし」')
+  ]
+}
+
+const App = {
+  oninit: () => State.value = '「私・わたし」のシャツは「赤・aka」です: Skyrtan {mín|meen} er rauð',
+  view: () => [
+    m(Instructions),
     m(
       'textarea', {
         value: State.value, 
