@@ -35,7 +35,7 @@ const App = {
   oninit: () => State.value = '「私・わたし」のシャツは「赤・あか」です: Skyrtan {mín|meen} er rauð',
   view: () => [
     m(
-      'input[type=text]', {
+      'textarea', {
         value: State.value, 
         oninput: (event) => State.handleInput(event.target.value)
       },

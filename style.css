@@ -1,26 +1,32 @@
-body {
-  font-size: 16pt;
+html {
   font-family: -apple-system;
+  font-size: 14pt;
 }
-input {
-  width: 100%; 
-  font-size: 20px;
+body {
+  max-width: 40rem;
+}
+textarea {
+  font-size: inherit;
+  min-height: 2.5em;
+  resize: vertical;
+  width: 100%;
 }
 pre {
-  width: 40%;
-  float: left;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
 }
-ruby {
+input + p {
+  font-size: 1.2rem;
 }
 rt {
-  font-size: 1em;
   opacity: 0;
+  z-index: -1;
 }
 ruby > span {
+  border: 1px solid transparent;
+  border-bottom: 1px dashed black;
   display: inline-block;
-  transform: translateY(0);
-  box-shadow: 0 1px 0 0 black;
-  outline: 1px dashed white;
+  isolation: isolate;
 }
 ruby:hover rt {
   opacity: 1;
@@ -28,6 +34,7 @@ ruby:hover rt {
 }
 ruby:hover > span {
   background-color: white;
-  outline: none;
-  box-shadow: 0 1px 0 0 black, -1px 0 0 0 black, 1px 0 0 0 black;
+  border-bottom-style: solid;
+  border-color: black;
+  border-top-color: transparent;
 }
