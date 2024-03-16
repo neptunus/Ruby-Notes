@@ -1,40 +1,41 @@
-html {
-  font-family: -apple-system;
-  font-size: 14pt;
-}
-body {
+.note {
+  display: flex;
+  flex-direction: column;
   max-width: 40rem;
+  margin-inline: auto;
+  row-gap: 1em;
+  background-color: rgb(233, 233, 233);
+  border-style: outset;
+  padding: 1rem;
 }
-textarea {
-  font-size: inherit;
+.note textarea {
   min-height: 2.5em;
   resize: vertical;
-  width: 100%;
 }
-pre {
+.note pre {
   font-size: 0.8rem;
   white-space: pre-wrap;
 }
-input + p {
+.note textarea + p {
   font-size: 1.2rem;
 }
-rt {
+.note rt {
   opacity: 0;
-  z-index: -1;
 }
-ruby > span {
+.note ruby > span {
   border: 1px solid transparent;
   border-bottom: 1px dashed black;
   display: inline-block;
   isolation: isolate;
 }
-ruby:hover rt {
+.note ruby:hover rt {
   opacity: 1;
   outline: 1px solid;
+  background-color: gainsboro;
 }
-ruby:hover > span {
-  background-color: white;
+.note ruby:hover > span {
+  background-color: gainsboro;
   border-bottom-style: solid;
   border-color: black;
   border-top-color: transparent;
-}
+} 

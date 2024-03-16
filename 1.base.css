@@ -1,0 +1,27 @@
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14pt;
+  }
+  input,
+  textarea,
+  button {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  /* Better typographic display */
+	html { 
+		text-rendering: geometricPrecision; 
+		-webkit-font-smoothing: antialiased;
+	}
+
+  body {
+    padding: 1em;
+    background: white;
+  }
+}
