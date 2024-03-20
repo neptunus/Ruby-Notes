@@ -1,4 +1,4 @@
-.note {
+.app {
   display: flex;
   flex-direction: column;
   max-width: 40rem;
@@ -8,34 +8,34 @@
   border-style: outset;
   padding: 1rem;
 }
-.note textarea {
+.app textarea {
   min-height: 2.5em;
   resize: vertical;
 }
-.note pre {
+.app pre {
   font-size: 0.8rem;
   white-space: pre-wrap;
 }
-.note textarea + p {
+.app textarea + p {
   font-size: 1.2rem;
 }
-.note rt {
+.app rt {
   opacity: 0;
 }
-.note ruby > span {
+.app ruby > span {
   border: 1px solid transparent;
   border-bottom: 1px dashed black;
   display: inline-block;
   isolation: isolate;
 }
-.note ruby:hover rt {
+.app ruby:hover rt {
   opacity: 1;
   outline: 1px solid;
   background-color: gainsboro;
 }
-.note ruby:hover > span {
+.app ruby:hover > span {
   background-color: gainsboro;
   border-bottom-style: solid;
   border-color: black;
   border-top-color: transparent;
-} 
+}
