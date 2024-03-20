@@ -1,9 +1,25 @@
 <!doctype html>
 <title>Ruby Notes</title>
 <link rel="stylesheet" type="text/css" href="1.base.css"></link>
-<script src="https://unpkg.com/mithril@2.0.4/mithril.min.js"></script>
 <link rel="stylesheet" type="text/css" href="app.css"></link>
+<script src="https://unpkg.com/htmx.org@1.9.11"></script>
 <body>
 
-<script src="app.js"></script>
+
+<section class="app">
+	<p>Leiðbeiningar</p>
+	<p>Umlyktu orði sem þú vilt útskýra með slaufusvigum { } eða japanskum gæsalöppum 「 」. Settu | eða ・ á milli orðs og útskýringar.</p>
+	<p>Dæmi:<br>{私|watashi}<br>「私・わたし」</p>
+
+	<textarea placeholder="skrif hér">「私・わたし」のシャツは「赤・aka」です！</textarea>
+	<button 
+		type="button"
+		hx-get="./response.html"
+		hx-target="next .note"
+		>ýt hér</button>
+	<p class="note">
+		<ruby><span>私</span><rt>わたし</rt></ruby>のシャツは<ruby><span>赤</span><rt>aka</rt></ruby>です
+	</p>
+</section>
+
 </body>
